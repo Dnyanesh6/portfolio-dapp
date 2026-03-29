@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Transaction,PublicKey, SystemProgram } from '@solana/web3.js'
+import { Transaction,PublicKey, SystemProgram, sendAndConfirmTransaction } from '@solana/web3.js'
 import { useWallet } from '@solana/wallet-adapter-react'
 import { useConnection } from '@solana/wallet-adapter-react'
 
@@ -31,12 +31,12 @@ function Send() {
                     const transaction = new Transaction().add(
                         SystemProgram.transfer({
                             fromPubkey: publicKey!,
-                            toPubkey: new PublicKey(document.getElementById("recipient")!),
-                            lamports: parseInt(document.getElementById("amount").value * 1000_000_000)
+                            toPubkey: new PublicKey(document.getElementById("recipient")!.value),
+                            lamports: document.getElementById("amount")!.value * 1000_000_000
                         })
                     );
 
-                    await sendTransaction(transaction, connection)
+                    await sendTransaction(connection, transaction);
                 }
             }
             type="text" placeholder="Amount" />

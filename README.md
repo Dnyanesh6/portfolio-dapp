@@ -1,73 +1,105 @@
-# React + TypeScript + Vite
+# 💰 Solana Portfolio dApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Web3 portfolio dashboard that allows users to **view their Solana wallet balance** and **send SOL tokens** seamlessly.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+* 🔐 Connect wallet (Solana Wallet Adapter)
+* 💰 View real-time SOL balance
+* 📊 Fetch wallet account details
+* 🔁 Send SOL to other wallet addresses
+* ⚡ Fast & responsive UI powered by Bun
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧠 How It Works
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Connects to the Solana blockchain using Web3 APIs
+* Fetches wallet balance using public RPC endpoints
+* Allows users to send SOL transactions securely
+* Uses wallet adapter for authentication & signing
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠 Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* ⚛️ Frontend: React.js / Next.js
+* 🎨 Styling: TailwindCSS
+* 🔗 Blockchain: Solana Web3.js
+* 🔐 Wallet Integration: Solana Wallet Adapter
+* ⚡ Runtime & Package Manager: Bun
+
+---
+
+## ⚙️ Installation & Setup
+
+### 📦 Using Bun (Recommended)
+
+```bash id="bun1"
+# Clone the repo
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+
+# Navigate into project
+cd YOUR_REPO_NAME
+
+# Install dependencies
+bun install
+
+# Run the app
+bun run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 📦 Using npm (Alternative)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash id="npm1"
+npm install
+npm run dev
 ```
+
+---
+
+## 🌐 Usage
+
+1. Connect your Solana wallet
+2. View your current balance
+3. Enter recipient wallet address
+4. Send SOL securely
+
+---
+
+## ⚠️ Note
+
+* Ensure you're connected to the correct Solana network (Devnet/Mainnet)
+* Always test transactions on **Devnet** before using real funds
+
+---
+
+## 🔮 Future Improvements
+
+* 📈 Transaction history
+* 🪙 SPL token support
+* 📊 Portfolio analytics
+* 🌍 Multi-network support
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork and improve the project.
+
+---
+
+## 📫 Contact
+
+* GitHub: https://github.com/Dnyanesh6
+* LinkedIn: https://linkedin.com/in/dnyanesh-chaudhari-48942328a
+
+---
+
+## ⭐ Show Your Support
+
+If you like this project, give it a ⭐ on GitHub!
